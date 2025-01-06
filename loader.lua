@@ -10,7 +10,7 @@ local Window = Rayfield:CreateWindow({
    Name = "Alucard Hub | Evo Tycoon",
    Icon = 17091459839,
    LoadingTitle = "Alucard Hub",
-   LoadingSubtitle = "By Moligrafi",
+   LoadingSubtitle = "By alucard",
    Theme = "Amethyst"
 })
 
