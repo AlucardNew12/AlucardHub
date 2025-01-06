@@ -3,6 +3,7 @@
 local function LoadGame()
   game.Players.LocalPlayer.Name = "Alucard Pirocudo"
   game.Players.LocalPlayer.DisplayName = "Alucard Pirocudo"
+  print("bct")
 end
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
