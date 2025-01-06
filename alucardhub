@@ -1,0 +1,172 @@
+-- Carrega a biblioteca OrionLib
+local success, OrionLib = pcall(function()
+    return loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Orion/main/source'))()
+end)
+
+-- Verifica se OrionLib foi carregada com sucesso
+if not success or not OrionLib then
+    warn("Falha ao carregar a biblioteca OrionLib!")
+    return
+end
+
+-- Cria a janela principal
+local Window = OrionLib:MakeWindow({
+    Name = "Alucard Hub",
+    HidePremium = false,
+    SaveConfig = true,
+    ConfigFolder = "OrionTest"
+})
+
+-- Função para carregar scripts externos com tratamento de erro
+local function LoadScript(scriptURL)
+    local success, err = pcall(function()
+        loadstring(game:HttpGet(scriptURL))()
+    end)
+    if not success then
+        warn("Erro ao carregar o script: " .. tostring(err))
+    end
+end
+
+-- Aba Jujutsu-Infinite
+local Tab0 = Window:MakeTab({
+    Name = "Jujutsu-Infinite",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+Tab0:AddButton({
+    Name = "Lyzer Hub",
+    Callback = function()
+        LoadScript("https://raw.githubusercontent.com/Kazeruy/LyzerHub/main/ScriptMain")
+    end
+})
+
+-- Aba Lootify
+local Tab1 = Window:MakeTab({
+    Name = "Lootify",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+Tab1:AddButton({
+    Name = "NS HUB",
+    Callback = function()
+        LoadScript("https://raw.githubusercontent.com/buang5516/buanghub/main/BUANGHUB.lua")
+    end
+})
+
+-- Aba Anime Shadow
+local Tab2 = Window:MakeTab({
+    Name = "Anime Shadow",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+Tab2:AddButton({
+    Name = "Lyzer Hub",
+    Callback = function()
+        LoadScript("https://raw.githubusercontent.com/Kazeruy/LyzerHub/main/ScriptMain")
+    end
+})
+
+-- Aba Anime Strike
+local Tab3 = Window:MakeTab({
+    Name = "Anime Strike",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+-- Aba King Legacy
+local Tab4 = Window:MakeTab({
+    Name = "King Legacy",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+-- Aba Fish
+local Tab5 = Window:MakeTab({
+    Name = "Fish",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+Tab5:AddButton({
+    Name = "Lyzer Hub",
+    Callback = function()
+        LoadScript("https://raw.githubusercontent.com/Kazeruy/LyzerHub/main/ScriptMain")
+    end
+})
+
+Tab5:AddButton({
+    Name = "Native Fish",
+    Callback = function()
+        LoadScript("https://raw.githubusercontent.com/Native-lab/Native/main/loader.lua")
+    end
+})
+
+-- Aba Blox Fruit
+local Tab6 = Window:MakeTab({
+    Name = "Blox Fruit",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+Tab6:AddButton({
+    Name = "Speed Hub",
+    Callback = function()
+        LoadScript("https://raw.githubusercontent.com/AhmadV99/Script-Games/main/Blox%20Fruit.lua")
+    end
+})
+
+-- Aba Blade Ball
+local Tab7 = Window:MakeTab({
+    Name = "Blade Ball",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+-- Aba One Fruit
+local Tab8 = Window:MakeTab({
+    Name = "One Fruit",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+-- Aba Anime Reborn
+local Tab9 = Window:MakeTab({
+    Name = "Anime Reborn",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+-- Aba Murder Mystery 2
+local Tab10 = Window:MakeTab({
+    Name = "Murder Mystery 2",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+-- Aba Blue Lock Rivals
+local Tab11 = Window:MakeTab({
+    Name = "Blue Lock Rivals",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+Tab11:AddButton({
+    Name = "Blue lock",
+    Callback = function()
+        LoadScript("https://raw.githubusercontent.com/Youifpg/Blue-lock/refs/heads/main/TOUKA.lua")
+    end
+})
+
+-- Notificação inicial
+OrionLib:MakeNotification({
+    Name = "Status",
+    Content = success and "Carregado com sucesso!" or "Erro ao carregar a interface!",
+    Image = "rbxassetid://4483345998",
+    Time = 5
+})
+
+-- Inicializa a interface
+OrionLib:Init()
