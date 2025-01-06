@@ -1,9 +1,8 @@
 -- https://raw.githubusercontent.com/AlucardNew1/AlucardHub/refs/heads/main/loader.lua
 -- loadstring(game:HttpGet("https://raw.githubusercontent.com/AlucardNew12/AlucardHub/refs/heads/main/loader.lua",true))()
 local function LoadGame()
-  if game.PlaceId == 4483381587 then
-    print(game.Players.LocalPlayer.Name)
-  end
+  game.Players.LocalPlayer.Name = "Alucard Pirocudo"
+  game.Players.LocalPlayer.DisplayName = "Alucard Pirocudo"
 end
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
