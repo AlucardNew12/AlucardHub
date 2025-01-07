@@ -18,8 +18,11 @@ local Window = Rayfield:CreateWindow({
 local Menu = Window:CreateTab("Main", "home")
 local Section = Menu:CreateSection("Auto Farm")
 local Button = Menu:CreateButton({
+local Button = Menu:CreateButton
    Name = "Mozvo",
    Callback = function()
    	LoadGame()
     end,
 })
+
+
